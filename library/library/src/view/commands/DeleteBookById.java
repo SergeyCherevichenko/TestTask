@@ -1,12 +1,14 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public class DeleteBookById extends Command{
-    public DeleteBookById(String description, ConsoleUI consoleUI) {
+    public DeleteBookById( ConsoleUI consoleUI) {
         super("Remove book by id", consoleUI);
     }
 
     @Override
     public void execute() {
-        getConsoleUI().removeBookById();
+        getConsoleUI().deleteBookById();
     }
 }

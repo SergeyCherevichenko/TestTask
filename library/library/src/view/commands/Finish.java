@@ -1,7 +1,9 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public class Finish extends Command {
-    public Finish(String description, ConsoleUI consoleUI) {
+    public Finish(ConsoleUI consoleUI) {
         super("Exit library", consoleUI);
     }
 

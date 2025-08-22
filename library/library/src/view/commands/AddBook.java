@@ -1,4 +1,6 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public class AddBook extends Command{
     public AddBook(ConsoleUI consoleUI){

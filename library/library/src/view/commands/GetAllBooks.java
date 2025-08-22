@@ -1,7 +1,9 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public class GetAllBooks extends Command{
-    public GetAllBooks(String description, ConsoleUI consoleUI) {
+    public GetAllBooks(ConsoleUI consoleUI) {
         super("Get all books", consoleUI);
     }
 

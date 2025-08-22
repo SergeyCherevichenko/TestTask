@@ -1,6 +1,11 @@
-public class BookBuilder {
-    public BookBuilder(int id, String name, String author){
-        Book book = new Book(id,name,author);
+package library_model;
 
+public class BookBuilder {
+
+    private static int nextId = 1;
+
+    public Book bookBuild(String name, String author){
+        Book book = new Book(nextId ++,name,author);
+        return book;
     }
 }

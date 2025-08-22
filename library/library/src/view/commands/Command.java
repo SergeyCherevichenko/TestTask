@@ -1,4 +1,6 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public  abstract class Command {
     private String description;

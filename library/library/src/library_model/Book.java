@@ -1,3 +1,5 @@
+package library_model;
+
 public class Book {
     private final int id;
     private final String name;
@@ -11,5 +13,18 @@ public class Book {
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    @Override
+    public String toString() {
+        return "№ id" + id + ": " + name + " by " + author;
     }
 }

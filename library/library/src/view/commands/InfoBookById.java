@@ -1,7 +1,9 @@
-package view.command;
+package view.commands;
+
+import view.ConsoleUI;
 
 public class InfoBookById extends Command{
-    public InfoBookById(String description, ConsoleUI consoleUI) {
+    public InfoBookById(ConsoleUI consoleUI) {
         super("Get info book by id", consoleUI);
     }
 
