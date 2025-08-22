@@ -33,11 +33,18 @@ public class WordCounter {
         }
 
     public void printString(List<String> str1){
-        if(str1.isEmpty()){
-      System.out.println("String Empty");
+        if (str1.isEmpty()) {
+            if (str == null || str.isBlank()) {
+                System.out.println("Input string is empty.");
+            } else {
+                System.out.println("No words found with the given count.");
+            }
+            return;
         }
-        for(String s : str1){
-      System.out.print(s +" ");
+
+        for (String s : str1) {
+            System.out.print(s + " ");
         }
     }
+
 }

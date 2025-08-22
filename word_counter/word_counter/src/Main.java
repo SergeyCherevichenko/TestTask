@@ -1,26 +1,22 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-    System.out.println("Enter string: ");
-    String str = scan.nextLine();
-    System.out.println("Enter number of matches: ");
-    int n = 0;
-    boolean isCorrect = true;
-    while(isCorrect){
-    try {
-      n = scan.nextInt();
-      isCorrect = false;
-    } catch (InputMismatchException e){
-        System.out.println("You not enter number. Please tree again:");
-        scan.nextLine();
+        if (args.length < 2) {
+            System.out.println("Error: please provide a string and a number as arguments.");
+            System.out.println("Example: java Main \"hello world hello\" 2");
+            return;
+        }
 
+        String str = args[0];
+        int n;
+
+        try {
+            n = Integer.parseInt(args[1]);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: second argument must be an integer.");
+            return;
+        }
+
+        WordCounter wordCounter = new WordCounter(str, n);
+        wordCounter.printString(wordCounter.getWordCounterByN());
     }
-    }
-    WordCounter wordCounter = new WordCounter(str,n);
-    wordCounter.printString(wordCounter.getWordCounterByN());
-}
 }
